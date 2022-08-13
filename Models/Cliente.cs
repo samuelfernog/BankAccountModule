@@ -1,16 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
+using System.ComponentModel.DataAnnotations;
 namespace BankAccountModule.Models
 {
     public class Cliente
     {
-    string nome;
-    int cpf;
-    int dataNascimento;
-    string profissao;
+    string Nome;
+
+    [StringLength(11,MinimumLength=11)]
+    string Cpf { get; set; }
+    DateTime DataNascimento { get; set; }
+    Profissao Profissao;
         
     }
 }
